@@ -20,59 +20,67 @@
 ![Follow](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/eb4ee7b1-2c83-4b82-a825-4ac4167210f4)
 
 **Queries**
--- Query1: Fetch all users name from database.
+<br><br>
+ Query1: Fetch all users name from database.
 <br>
-         --  SELECT Name FROM twitter.User;
+<br>
+          SELECT Name FROM twitter.User;
          <br>
          ![Query1](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/d99ade28-fb23-42e6-8069-d28146fc5dff)
 
--- Query2: Fetch all tweets of user by user id most recent tweets 
+Query2: Fetch all tweets of user by user id most recent tweets 
 <br>
-    --  SELECT Tweet.TextualContent AS Tweets
+<br>
+      SELECT Tweet.TextualContent AS Tweets
        FROM Tweet 
        WHERE Tweet.UserID = 1 
        ORDER BY Tweet.Timestamp DESC;
        <br>
       ![Query2](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/4ae1fe8f-4956-462a-a130-a6b8e34be616)
 
--- Query3: Fetch retweet count of particular tweet by tweet id.
+ Query3: Fetch retweet count of particular tweet by tweet id.
 <br>
-        -- SELECT COUNT(Retweet.RetweetID) AS RetweetCount
+<br>
+          SELECT COUNT(Retweet.RetweetID) AS RetweetCount
            FROM Retweet
            WHERE Retweet.TweetID = 1;
            <br>
            ![Query3](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/d4c1c59e-e322-4b70-9411-7bc125925ee6)
-
--- Query4:  Fetch comment count of a particular tweet by tweet ID.
+           
+ Query4:  Fetch comment count of a particular tweet by tweet ID.
 <br>
-       -- SELECT COUNT(CommentTweet.TweetID) AS CommentCount
+<br>
+          SELECT COUNT(CommentTweet.TweetID) AS CommentCount
           FROM Tweet AS OriginalTweet
           JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID
           WHERE OriginalTweet.TweetID = 4;
           <br>
           ![Query4](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/06dba05a-f5f7-4de7-8d20-b19deeb73a67)
 
--- Query5: Fetch all users' names who have retweeted a particular tweet by tweet ID.
+ Query5: Fetch all users' names who have retweeted a particular tweet by tweet ID.
 <br>
-       -- SELECT User.Name 
+<br>
+          SELECT User.Name 
           FROM User 
           JOIN Retweet ON User.UserID = Retweet.UserID 
           WHERE Retweet.TweetID = 1;
           <br>
           ![Query5](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/bc95a703-bdbe-4967-ba97-b419af7c5377)
 
-  -- Query6: Fetch all commented tweet's content for a particular tweet by tweet ID.
+   Query6: Fetch all commented tweet's content for a particular tweet by tweet ID.
   <br>
-         -- SELECT CommentTweet.TextualContent AS Comments
+  <br>
+            SELECT CommentTweet.TextualContent AS Comments
             FROM Tweet AS OriginalTweet
             JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID
             WHERE OriginalTweet.TweetID = 4;
             <br>
             ![Query6](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/d0ce80fe-2e1a-4603-b110-ded704f24661)
             
-  -- Query7: Fetch all commented tweet's content for a particular tweet by tweet ID.
+   Query7: Fetch all commented tweet's content for a particular tweet by tweet ID.
   <br>
-          -- SELECT CommentTweet.TextualContent AS Comments
+  <br>
+             SELECT CommentTweet.TextualContent AS Comments
              FROM Tweet AS OriginalTweet
              JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID
              WHERE OriginalTweet.TweetID = 4;
@@ -83,7 +91,8 @@
 
   -- Query8: Fetch the user's timeline  (All tweets from users whom I am following with tweet content and user name who has tweeted it).
   <br>
-          --SELECT User.Name, Tweet.TextualContent 
+  <br>
+            SELECT User.Name, Tweet.TextualContent 
             FROM User 
             JOIN Follow ON User.UserID = Follow.FollowingID 
             JOIN Tweet ON Follow.FollowingID = Tweet.UserID 
