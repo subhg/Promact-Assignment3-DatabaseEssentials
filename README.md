@@ -45,7 +45,8 @@ Query2: Fetch all tweets of user by user id most recent tweets
            FROM Retweet<br>
            WHERE Retweet.TweetID = 1;<br>
            <br>
-           ![Query3](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/d4c1c59e-e322-4b70-9411-7bc125925ee6)
+           ![Query4](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/a97eae03-5a9d-4d80-ba0c-b4126dfd3822)
+
            
  Query4:  Fetch comment count of a particular tweet by tweet ID.
 <br>
@@ -55,7 +56,8 @@ Query2: Fetch all tweets of user by user id most recent tweets
           JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID<br>
           WHERE OriginalTweet.TweetID = 4;<br>
           <br>
-          ![Query4](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/06dba05a-f5f7-4de7-8d20-b19deeb73a67)
+          ![Query5](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/0400919b-5f7d-4003-9b91-49ce3fa07ee9)
+
 
  Query5: Fetch all users' names who have retweeted a particular tweet by tweet ID.
 <br>
@@ -65,7 +67,8 @@ Query2: Fetch all tweets of user by user id most recent tweets
           JOIN Retweet ON User.UserID = Retweet.UserID <br>
           WHERE Retweet.TweetID = 1;<br>
           <br>
-          ![Query5](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/bc95a703-bdbe-4967-ba97-b419af7c5377)
+          ![Query6](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/4357c6ef-2a48-478d-9c6a-d6c19d786028)
+
 
    Query6: Fetch all commented tweet's content for a particular tweet by tweet ID.
   <br>
@@ -75,7 +78,8 @@ Query2: Fetch all tweets of user by user id most recent tweets
             JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID<br>
             WHERE OriginalTweet.TweetID = 4;<br>
             <br>
-            ![Query6](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/d0ce80fe-2e1a-4603-b110-ded704f24661)
+            ![Query7](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/2eee7fe6-260a-4c5a-8a33-05fbce4c4f63)
+
             
    Query7: Fetch all commented tweet's content for a particular tweet by tweet ID.
   <br>
