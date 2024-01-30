@@ -75,7 +75,7 @@ Query2: Fetch all tweets of user by user id most recent tweets
    <br>
             SELECT COUNT(*) AS LikeCount <br>
             FROM Likes<br>
-            WHERE Likes.TweetID = 1;<br.
+            WHERE Likes.TweetID = 1;<br>
             ![Query3](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/fa18af6d-94ac-4fc3-ad2b-bccf5f4e968e)
 
             
