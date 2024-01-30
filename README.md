@@ -1,4 +1,4 @@
-**Tables**
+**Tables**<br>
 **User Table**
 <br>
 ![User](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/a4a9b63e-b2ff-4e4d-a7cb-7ed387a96b75)
