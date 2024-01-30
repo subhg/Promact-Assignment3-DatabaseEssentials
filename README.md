@@ -70,15 +70,13 @@ Query2: Fetch all tweets of user by user id most recent tweets
           ![Query6](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/4357c6ef-2a48-478d-9c6a-d6c19d786028)
 
 
-   Query6: Fetch all commented tweet's content for a particular tweet by tweet ID.
-  <br>
-  <br>
-            SELECT CommentTweet.TextualContent AS Comments<br>
-            FROM Tweet AS OriginalTweet<br>
-            JOIN Tweet AS CommentTweet ON OriginalTweet.TweetID = CommentTweet.OriginalTweetID<br>
-            WHERE OriginalTweet.TweetID = 4;<br>
-            <br>
-            ![Query7](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/2eee7fe6-260a-4c5a-8a33-05fbce4c4f63)
+   Query6: Fetch like count of particular tweet by tweet id.
+   <br>
+   <br>
+            SELECT COUNT(*) AS LikeCount <br>
+            FROM Likes<br>
+            WHERE Likes.TweetID = 1;<br.
+            ![Query3](https://github.com/subhg/Promact-Assignment3-DatabaseEssentials/assets/113555022/fa18af6d-94ac-4fc3-ad2b-bccf5f4e968e)
 
             
    Query7: Fetch all commented tweet's content for a particular tweet by tweet ID.
